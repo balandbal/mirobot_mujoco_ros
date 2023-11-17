@@ -1,0 +1,8 @@
+initial_joint_positions:
+  joint_map:
+    Joint1: "0.0"
+    Joint2: "0.0"
+    Joint3: "0.0"
+    Joint4: "0.0"
+    Joint5: "0.0"
+    Joint6: "0.0"

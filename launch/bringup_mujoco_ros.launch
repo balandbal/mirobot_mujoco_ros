@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- MUJOCO ROS -->
+  <arg name="ns"            default=""      doc="namespace" />
+  <arg name="verbose"       default="false" doc="Should more debug output be printed?" />
+  <arg name="unpause"       default="false" doc="Should the simulation be unpaused on start?" />
+  <arg name="eval_mode"     default="false" doc="Should mujoco be started in evaluation mode?" />
+  <arg name="num_sim_steps" default="-1"    doc="Number of simulation steps to run. Set to '-1' to run indefinitely." />
+
+  <arg name="headless"         default="false" doc="Should the simulation be rendered." />
+  <arg name="render_offscreen" default="$(eval not arg('headless'))"  doc="Whether offscreen rendering should be enabled." />
+  <arg name="no_x"             default="$(arg headless)" doc="Set to true to enable running on a server without X, disabling everything related to OpenGL rendering."/>
+  
+  <arg name="use_sim_time"         default="true"  doc="Should mujoco ublish its simulation time as ros time?" />
+  <arg name="wait_for_xml"         default="true"  doc="Should mujoco_ros wait for a modelfile on the parameter server" />
+  <arg name="mujoco_plugin_config" default="$(find mirobot_mujoco_ros)/config/mujoco_ros_plugins.yaml" />
+  <arg name="realtime"             default="1.0"   doc="Desired realtime factor. Set to '-1' to run as fast as possbile " />
+  <arg name="debug"                default="false" doc="Should mujoco be started in gdb?" />
+
+  <arg name="initial_joint_states" default="$(find mirobot_mujoco_ros)/config/initial_joint_states.yaml" />
+  <arg name="console_config_file"  default="$(find mujoco_ros)/config/rosconsole.config" />
+
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${logger}] [${node}]: ${message}" />
+  <env if="$(arg verbose)" name="ROSCONSOLE_CONFIG_FILE" value="$(find mujoco_ros)/rosconsole.config" />
+
+  <param name="/use_sim_time" value="$(arg use_sim_time)"/>
+
+  <include file="$(find mujoco_ros)/launch/launch_server.launch">
+    <arg name="use_sim_time"         value="$(arg use_sim_time)"         />
+    <arg name="ns"                   value="$(arg ns)"                   />
+    <arg name="verbose"              value="$(arg verbose)"              />
+    <arg name="unpause"              value="$(arg unpause)"              />
+    <arg name="headless"             value="$(arg headless)"             />
+    <arg name="render_offscreen"     value="$(arg render_offscreen)"     />
+    <arg name="no_x"                 value="$(arg no_x)"                 />
+    <arg name="eval_mode"            value="$(arg eval_mode)"            />
+    <arg name="debug"                value="$(arg debug)"                />
+    <arg name="wait_for_xml"         value="$(arg wait_for_xml)"         />
+    <arg name="realtime"             value="$(arg realtime)"             />
+    <arg name="num_sim_steps"        value="$(arg num_sim_steps)"        />
+    <arg name="mujoco_plugin_config" value="$(arg mujoco_plugin_config)" />
+    <arg name="initial_joint_states" value="$(arg initial_joint_states)" />
+  </include>
+
+  <!-- ROS CONTROL -->
+  <rosparam command="load" file="$(find mirobot_mujoco_ros)/config/controllers.yaml" />
+
+  <node pkg="controller_manager" type="spawner" name="robot_controller_spawner" respawn="false" output="screen" args="joint_state_controller joint_position_controller" />
+
+</launch>

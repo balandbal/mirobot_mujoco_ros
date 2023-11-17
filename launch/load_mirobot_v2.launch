@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="hw_interface" default="hardware_interface/PositionJointInterface"/>
+    <arg name="control_rate" default="500" />
+    
+    <param name="robot_description"
+        command="$(find xacro)/xacro '$(find mirobot_mujoco_ros)/assets/mirobot_v2.urdf.xacro'
+        hw_interface:=$(arg hw_interface)" />
+    <param name="mujoco_xml"
+        command="$(find xacro)/xacro '$(find mirobot_mujoco_ros)/assets/mirobot_v2.xml.xacro'
+        control_rate:=$(arg control_rate)" />
+
+</launch>

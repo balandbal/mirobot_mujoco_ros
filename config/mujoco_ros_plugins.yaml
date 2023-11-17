@@ -1,0 +1,12 @@
+MujocoPlugins:
+  - type: mujoco_ros_sensors/MujocoRosSensorsPlugin
+
+  - type: mujoco_ros_control/MujocoRosControlPlugin
+    hardware:
+      type: mujoco_ros_control/DefaultRobotHWSim
+      control_period: 0.0002  # TODO: link this to the MuJoCo timestep
+
+  - type: mujoco_ros_mocap_control_plugin/MocapControlPlugin
+    mocap_mapping:
+      - body_name: link6
+        mocap_name: link6_mocap
