@@ -3,7 +3,7 @@
   <!-- MUJOCO ROS -->
   <arg name="ns"            default=""      doc="namespace" />
   <arg name="verbose"       default="false" doc="Should more debug output be printed?" />
-  <arg name="unpause"       default="false" doc="Should the simulation be unpaused on start?" />
+  <arg name="unpause"       default="true"  doc="Should the simulation be unpaused on start?" />
   <arg name="eval_mode"     default="false" doc="Should mujoco be started in evaluation mode?" />
   <arg name="num_sim_steps" default="-1"    doc="Number of simulation steps to run. Set to '-1' to run indefinitely." />
 
