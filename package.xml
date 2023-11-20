@@ -4,11 +4,11 @@
   <version>1.0.1</version>
   <description>The mirobot_mujoco_ros package</description>
 
-  <maintainer email="balazs.andras.balint@iap.fraunhofer.de">Balázs András Bálint</maintainer>
+  <maintainer email="balazs.andras.balint@ipa.fraunhofer.de">Balázs András Bálint</maintainer>
 
   <license>BSD-3-Clause</license>
 
-  <author email="balazs.andras.balint@iap.fraunhofer.de">Balázs András Bálint</author>
+  <author email="balazs.andras.balint@ipa.fraunhofer.de">Balázs András Bálint</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>xacro</exec_depend>
