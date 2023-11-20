@@ -6,8 +6,8 @@
     <param name="robot_description"
         command="$(find xacro)/xacro '$(find mirobot_mujoco_ros)/assets/mirobot_v2.urdf.xacro'
         hw_interface:=$(arg hw_interface)" />
-    <param name="mujoco_xml"
-        command="$(find xacro)/xacro '$(find mirobot_mujoco_ros)/assets/mirobot_v2.xml.xacro'
-        control_rate:=$(arg control_rate)" />
+
+    <node name="mujoco_xml" pkg="xacro" type="xacro"
+        args="$(find mirobot_mujoco_ros)/assets/mirobot_v2.xml.xacro control_rate:=$(arg control_rate) -o $(find mirobot_mujoco_ros)/assets/mirobot_v2.xml"/>
 
 </launch>

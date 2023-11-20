@@ -12,7 +12,8 @@
   <arg name="no_x"             default="$(arg headless)" doc="Set to true to enable running on a server without X, disabling everything related to OpenGL rendering."/>
   
   <arg name="use_sim_time"         default="true"  doc="Should mujoco ublish its simulation time as ros time?" />
-  <arg name="wait_for_xml"         default="true"  doc="Should mujoco_ros wait for a modelfile on the parameter server" />
+  <arg name="wait_for_xml"         default="false" doc="Should mujoco_ros wait for a modelfile on the parameter server" />
+  <arg name="modelfile"            default="$(find mirobot_mujoco_ros)/assets/mirobot_v2.xml" />
   <arg name="mujoco_plugin_config" default="$(find mirobot_mujoco_ros)/config/mujoco_ros_plugins.yaml" />
   <arg name="realtime"             default="1.0"   doc="Desired realtime factor. Set to '-1' to run as fast as possbile " />
   <arg name="debug"                default="false" doc="Should mujoco be started in gdb?" />
@@ -36,6 +37,7 @@
     <arg name="eval_mode"            value="$(arg eval_mode)"            />
     <arg name="debug"                value="$(arg debug)"                />
     <arg name="wait_for_xml"         value="$(arg wait_for_xml)"         />
+    <arg name="modelfile"            value="$(arg modelfile)"            />
     <arg name="realtime"             value="$(arg realtime)"             />
     <arg name="num_sim_steps"        value="$(arg num_sim_steps)"        />
     <arg name="mujoco_plugin_config" value="$(arg mujoco_plugin_config)" />
