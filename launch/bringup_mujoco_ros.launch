@@ -13,7 +13,7 @@
   
   <arg name="use_sim_time"         default="true"  doc="Should mujoco ublish its simulation time as ros time?" />
   <arg name="wait_for_xml"         default="false" doc="Should mujoco_ros wait for a modelfile on the parameter server" />
-  <arg name="modelfile"            default="$(find mirobot_mujoco_ros)/assets/mirobot_v2.xml" />
+  <arg name="modelfile"            default="$(find mirobot_mujoco_ros)/assets/mirobot_model.xml" />
   <arg name="mujoco_plugin_config" default="$(find mirobot_mujoco_ros)/config/mujoco_ros_plugins.yaml" />
   <arg name="realtime"             default="1.0"   doc="Desired realtime factor. Set to '-1' to run as fast as possbile " />
   <arg name="debug"                default="false" doc="Should mujoco be started in gdb?" />

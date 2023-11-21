@@ -4,10 +4,10 @@
     <arg name="control_rate" default="500" />
     
     <param name="robot_description"
-        command="$(find xacro)/xacro '$(find mirobot_mujoco_ros)/assets/mirobot_v2.urdf.xacro'
+        command="$(find xacro)/xacro '$(find mirobot_mujoco_ros)/assets/mirobot_model.urdf.xacro'
         hw_interface:=$(arg hw_interface)" />
 
     <node name="mujoco_xml" pkg="xacro" type="xacro"
-        args="$(find mirobot_mujoco_ros)/assets/mirobot_v2.xml.xacro control_rate:=$(arg control_rate) -o $(find mirobot_mujoco_ros)/assets/mirobot_v2.xml"/>
+        args="$(find mirobot_mujoco_ros)/assets/mirobot_model.xml.xacro control_rate:=$(arg control_rate) -o $(find mirobot_mujoco_ros)/assets/mirobot_model.xml"/>
 
 </launch>
