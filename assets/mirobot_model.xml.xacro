@@ -83,7 +83,7 @@
 
                   <body name="link6" pos="-1.7143e-05 0.0062119 0.019331" quat="0.707105 -0.707108 0 0" gravcomp="1">
                     <joint name="Joint6" pos="0 0 0" axis="-6.32701e-05 0.999991 0.0042638" range="-6.283 6.283" />
-                    <geom type="cylinder" size="0.001 0.001" mass="0.001"/>
+                    <geom type="cylinder" size="0.001 0.001" mass="0.001" contype="0" conaffinity="0" rgba="1 1 1 0"/>
 
                   </body>
                 </body>
