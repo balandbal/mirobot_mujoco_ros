@@ -5,7 +5,7 @@
     <xacro:property name="hw_interface" value="$(arg hw_interface)"/>
     <xacro:property name="prefix" value=""/>
 
-    <xacro:include filename="$(find Mirobot_V2_URDF_Files)/urdf/Mirobot_V2_URDF_Files.urdf"/>
+    <xacro:include filename="$(find mirobot_urdf)/urdf/mirobot_urdf.urdf" />
 
     <xacro:macro name="transmission" params="prefix joint_name hw_interface">
         <transmission name="${prefix}${joint_name}_trans">

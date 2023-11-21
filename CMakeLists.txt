@@ -8,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS)
 catkin_package(
   CATKIN_DEPENDS
     xacro
-    Mirobot_V2_URDF_Files
+    mirobot_urdf
     mujoco_ros
     mujoco_ros_sensors
     mujoco_ros_control
