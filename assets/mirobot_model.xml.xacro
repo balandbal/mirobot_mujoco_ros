@@ -53,37 +53,37 @@
     <!-- ROBOT ARM -->
     <body name="base" pos="0 0 0" gravcomp="1" childclass="robot">
       <body name="base_link" pos="0 0 0" gravcomp="1">
-        <inertial pos="0.061385 0.061385 0.0295631" quat="0.5 0.5 -0.5 0.5" mass="0.83046" diaginertia="0.00181346 0.00122515 0.00122515" />
-        <geom type="mesh" rgba="0.478431 0.478431 0.478431 1" mesh="base_link_collision" />
+        <inertial pos="0 0 0.029563" quat="0.5 0.5 -0.5 0.5" mass="0.83046" diaginertia="0.0018135 0.0012252 0.0012252" />
+        <geom type="mesh" rgba="0.47843 0.47843 0.47843 1" mesh="base_link_collision" />
 
-        <body name="link1" pos="0.061385 0.061385 0" gravcomp="1">
-          <inertial pos="0.0139209 0.000135347 0.11689" quat="0.637896 0.301947 0.305957 0.638989" mass="0.100784" diaginertia="6.20698e-05 5.14973e-05 2.49373e-05" />
+        <body name="link1" pos="0 0 0.08907" gravcomp="1">
+          <inertial pos="0.01392 0.00017568 0.02782" quat="0.636972 0.3015 0.306391 0.639914" mass="0.10078" diaginertia="6.20694e-05 5.14976e-05 2.4937e-05" />
           <joint name="Joint1" pos="0 0 0" axis="0 0 1" range="-1.919 2.792" />
-          <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="link1_collision" />
+          <geom type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="link1_collision" />
 
-          <body name="link2" pos="0.0266598 -0.0100773 0.126989" gravcomp="1">
-            <inertial pos="-0.000147878 -0.0166549 0.0497584" quat="0.708147 0.000213996 6.89968e-05 0.706065" mass="0.132171" diaginertia="0.000225757 0.000214472 2.33029e-05" />
-            <joint name="Joint2" pos="0 0 0" axis="0.00289701 0.999996 0" range="-0.611 1.222" />
+          <body name="link2" pos="0.026689 -0.01 0.037919" gravcomp="1">
+            <inertial pos="-0.000285886 -0.0166553 0.0497577" quat="0.707123 -0.0011095 -0.00125416 0.707089" mass="0.132171" diaginertia="0.000225757 0.000214472 2.33029e-05" />
+            <joint name="Joint2" pos="0 0 0" axis="0 1 0" range="-0.611 1.222" />
             <geom type="mesh" rgba="1 0.6 0.247059 1" mesh="link2_collision" />
 
-            <body name="link3" pos="-0.000133826 0 0.103558" gravcomp="1">
-              <inertial pos="0.015981 0.0217695 0.00460564" quat="0.00543631 0.61574 -0.00358634 0.787923" mass="0.0999859" diaginertia="0.000128775 0.000119394 2.89671e-05" />
-              <joint name="Joint3" pos="0 0 0" axis="0.00289701 0.999996 0" range="-2.094 1.047" />
+            <body name="link3" pos="-0.00052147 0 0.10356" gravcomp="1">
+              <inertial pos="0.0158955 0.0218157 0.00468223" quat="0.0042885 0.613846 -0.00270477 0.78941" mass="0.0999859" diaginertia="0.000128775 0.000119394 2.89671e-05" />
+              <joint name="Joint3" pos="0 0 0" axis="0 1 0" range="-2.094 1.047" />
               <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="link3_collision" />
 
-              <body name="link4" pos="0.11139 0.020972 0.019459" gravcomp="1">
-                <inertial pos="0.0397442 -0.000115496 -0.000190508" quat="-0.000509113 0.708816 -0.00253453 0.705389" mass="0.0455777" diaginertia="2.34679e-05 1.74414e-05 1.02362e-05" />
-                <joint name="Joint4" pos="0 0 0" axis="-0.999984 0.00289701 0.00481472" range="-3.142 3.142" />
+              <body name="link4" pos="0.11123 0.021295 0.019995" gravcomp="1">
+                <inertial pos="0.0397448 -3.52691e-07 8.51159e-07" quat="-1.72755e-05 0.70712 1.30532e-05 0.707094" mass="0.0455777" diaginertia="2.34679e-05 1.74414e-05 1.02362e-05" />
+                <joint name="Joint4" pos="0 0 0" axis="-1 0 0" range="-3.142 3.142" />
                 <geom type="mesh" rgba="1 0.6 0.247059 1" mesh="link4_collision" />
 
-                <body name="link5" pos="0.057767 0.0061276 -0.00025103" quat="-3.67321e-06 1 0 0" gravcomp="1">
-                  <inertial pos="-1.78881e-05 0.00626251 0.00757976" quat="0.999997 0.00215724 2.85613e-05 0.00145901" mass="0.0143828" diaginertia="1.94302e-06 1.83053e-06 1.09304e-06" />
-                  <joint name="Joint5" pos="0 0 0" axis="0.00291759 -0.999987 -0.00429129" range="-3.49 0.523" />
-                  <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="link5_collision" />
+                <body name="link5" pos="0.05775 0.006295 0" quat="-3.67321e-06 1 0 0" gravcomp="1">
+                  <inertial pos="0 0.006295 0.0075528" quat="1 1.17492e-05 0 0" mass="0.014383" diaginertia="1.943e-06 1.8305e-06 1.093e-06" />
+                  <joint name="Joint5" pos="0 0 0" axis="0 -1 0" range="-3.49 0.523" />
+                  <geom type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="link5_collision" />
 
-                  <body name="link6" pos="-1.7143e-05 0.0062119 0.019331" quat="0.707105 -0.707108 0 0" gravcomp="1">
-                    <joint name="Joint6" pos="0 0 0" axis="-6.32701e-05 0.999991 0.0042638" range="-6.283 6.283" />
-                    <geom type="cylinder" size="0.001 0.001" mass="0.001" contype="0" conaffinity="0" rgba="1 1 1 0"/>
+                  <body name="link6" pos="0 0.0062949 0.019304" quat="-3.67321e-06 0 0 1" gravcomp="1">
+                    <joint name="Joint6" pos="0 0 0" axis="0 2.7322e-05 -1" range="-6.283 6.283" />
+                    <geom type="cylinder" size="0.001 0.001" mass="0.001"/>
 
                   </body>
                 </body>
@@ -99,11 +99,11 @@
     <body name="link6_dummy" childclass="endeffector">
       <freejoint/>
       <body name="link6_compliant" gravcomp="0">
-        <inertial pos="0.020487 -0.017507 -0.00012792" quat="0.0273834 0.707513 -0.0298504 0.705538" mass="0.038132" diaginertia="2.62392e-05 2.61176e-05 3.39792e-06" />
+        <inertial pos="-0.020486 -3.5945e-07 0.017509" quat="0.479165 0.520029 0.519657 0.479508" mass="0.038132" diaginertia="2.624e-05 2.61169e-05 3.39794e-06" />
         <geom type="mesh" rgba="1 1 1 1" mesh="link6_collision" />
 
-        <body name="link61" pos="0 0 0" gravcomp="0">
-          <inertial pos="0.060943 -0.020995 -0.00024766" quat="0.999999 4.82219e-08 0.00129737 3.71689e-05" mass="0.11219" diaginertia="1.5538e-05 1.0568e-05 1.0568e-05" />
+        <body name="link61" pos="0.046 0 0.027" quat="0.707105 0 0.707108 0" gravcomp="0">
+          <inertial pos="0.005 1.3661e-07 -0.10694" quat="0.5 0.5 -0.5 0.5" mass="0.11219" diaginertia="1.5538e-05 1.0568e-05 1.0568e-05" />
           <geom type="mesh" rgba="1 1 1 1" mesh="link61" />
           <site name="sensorsite"/>
         </body>

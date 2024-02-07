@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="Mirobot_V2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="mirobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:arg name="hw_interface" default="hardware_interface/PositionJointInterface"/>
 
     <xacro:property name="hw_interface" value="$(arg hw_interface)"/>
     <xacro:property name="prefix" value=""/>
 
-    <xacro:include filename="$(find mirobot_urdf)/urdf/mirobot_urdf.urdf" />
+    <link name="base"/>
+
+    <xacro:include filename="$(find mirobot_urdf)/urdf/mirobot_urdf.urdf"/>
+
+    <joint name="base_joint" type="fixed">
+        <origin/>
+        <parent link="base"/>
+        <child link="base_link"/>
+    </joint>
 
     <xacro:macro name="transmission" params="prefix joint_name hw_interface">
         <transmission name="${prefix}${joint_name}_trans">
