@@ -15,6 +15,14 @@
         <child link="base_link"/>
     </joint>
 
+    <link name="imu_frame"/>
+
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="0.0 0.0 -0.110"/>
+        <parent link="link61"/>
+        <child link="imu_frame"/>
+    </joint>
+
     <xacro:macro name="transmission" params="prefix joint_name hw_interface">
         <transmission name="${prefix}${joint_name}_trans">
             <type>transmission_interface/SimpleTransmission</type>

@@ -106,7 +106,10 @@
         <body name="link61" pos="0.046 0 0.027" quat="0.707105 0 0.707108 0" gravcomp="0">
           <inertial pos="0.005 1.3661e-07 -0.10694" quat="0.5 0.5 -0.5 0.5" mass="0.11219" diaginertia="1.5538e-05 1.0568e-05 1.0568e-05" />
           <geom type="mesh" rgba="1 1 1 1" mesh="link61" />
-          <site name="imu_sensorsite" pos="0 0 -0.110"/>
+
+          <body name="imu_frame" pos="0 0 -0.110">
+            <site name="imu_sensorsite" />
+          </body>
         </body>
       </body>
     </body>
