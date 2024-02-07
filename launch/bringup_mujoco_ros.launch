@@ -44,6 +44,9 @@
     <arg name="initial_joint_states" value="$(arg initial_joint_states)" />
   </include>
 
+  <!-- TF from joint states -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" respawn="false" />
+
   <!-- ROS CONTROL -->
   <rosparam command="load" file="$(find mirobot_mujoco_ros)/config/controllers.yaml" />
 
