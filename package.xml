@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>mirobot_mujoco_ros</name>
-  <version>2.1.0</version>
+  <version>2.2.0</version>
   <description>The mirobot_mujoco_ros package</description>
 
   <maintainer email="balazs.andras.balint@ipa.fraunhofer.de">Balázs András Bálint</maintainer>
