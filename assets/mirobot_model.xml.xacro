@@ -100,7 +100,7 @@
       <freejoint/>
       <body name="link6_compliant" gravcomp="0">
         <inertial pos="0.0204857 -3.59449e-07 -0.0175089" quat="0.479509 0.519656 0.52003 0.479164" mass="0.0381324" diaginertia="2.62395e-05 2.61171e-05 3.3979e-06" />
-        <geom type="mesh" rgba="1 1 1 1" mesh="link6_collision" />
+        <geom quat="1.76037e-12 1.32679e-06 1 1.32679e-06" type="mesh" rgba="1 1 1 1" mesh="link6_collision" />
         <site name="ft_sensorsite"/>
 
         <body name="link61" pos="-0.046 0 -0.016" quat="-2.59734e-06 0.707105 -2.59735e-06 -0.707108">
@@ -109,6 +109,7 @@
 
           <body name="imu_frame" pos="0 0 -0.11">
             <site name="imu_sensorsite" />
+
           </body>
         </body>
       </body>
